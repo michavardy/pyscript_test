@@ -1,0 +1,47 @@
+<HTML>
+    <HEAD>
+         <TITLE>My first HTML document</TITLE>
+         <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+         <style type="text/css">
+            .button {
+              background-color: white;
+              color: black;
+              border: 2px solid #555555;
+            }
+            .button:hover {
+              background-color: #555555;
+              color: white;
+            }
+            .display{
+                color:black;
+                border: dpx solid black;
+            }
+            
+        </style>
+    </HEAD>
+    <BODY>
+        <py-script>
+from js import console
+def increment(event):
+    global counter_value
+    counter_value = counter_value + 1
+    console.log('increment',counter_value)
+    display_value()
+def decrement(event):
+    global counter_value
+    counter_value = counter_value - 1
+    console.log('decrement',counter_value)
+    display_value()
+def display_value():
+    global counter_value
+    document.getElementById('value').innerText = counter_value
+counter_value = 0
+display_value()
+        </py-script>
+       <button id = "increment" class = "button" pys-onClick="increment">increment</button>
+       <button id = "decrement" class = "button" pys-onClick="decrement">decrement</button>
+       <h3 id="value" class = "display"></h3>
+
+    </BODY>
+ </HTML>

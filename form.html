@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <HEAD>
+        <TITLE>FORM EXAMPLE</TITLE>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <link rel="stylesheet" href="form.css">
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+   </HEAD>
+    <body>
+        <form pys-onsubmit="onSub()">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+          <input type="submit" value="Submit">
+        </form>
+        <h2 id="sub" class="datadisplay"></h2>
+        <py-script>
+#pyscript.write('data', 'form data')
+def onSub(*args, **kwargs):
+    pyscript.write('sub','my submission')
+        </py-script>
+
+    </body>
+</html>

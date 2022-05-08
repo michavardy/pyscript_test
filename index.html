@@ -1,0 +1,20 @@
+<HTML>
+   <HEAD>
+        <TITLE>My first HTML document</TITLE>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <link rel="stylesheet" href="index.css">
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+   </HEAD>
+   <BODY>
+      <h1>Hello world!</h1>
+      <div id="dec" class="decorated"></div>
+      <button id = b1 class = "button" pys-onClick="sayHi">sayhi</button>
+      <h1 id = resp class = "response"></h1>
+      <py-script>
+pyscript.write('dec', 'Hello World decorated')
+def sayHi(*args, **kwargs):
+         pyscript.write('resp','I have been clicked')
+      </py-script>
+   </BODY>
+</HTML>
+
