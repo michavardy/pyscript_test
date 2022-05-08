@@ -4,10 +4,19 @@
          <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
          <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
          <style type="text/css">
+             .container{
+                display: flex;
+                flex-direction: row;
+                justify-content:  flex-start;
+                
+             }
             .button {
               background-color: white;
               color: black;
               border: 2px solid #555555;
+              width: 50px;
+              margin:20px;
+              font:30px;
             }
             .button:hover {
               background-color: #555555;
@@ -15,7 +24,12 @@
             }
             .display{
                 color:black;
-                border: dpx solid black;
+                border: 1px solid grey;
+                width: 50px;
+                margin:20px;
+                font:30px;
+                display: flex;
+                justify-content: center;
             }
             
         </style>
@@ -39,9 +53,11 @@ def display_value():
 counter_value = 0
 display_value()
         </py-script>
-       <button id = "increment" class = "button" pys-onClick="increment">increment</button>
-       <button id = "decrement" class = "button" pys-onClick="decrement">decrement</button>
+       <div class="container">
+       <button id = "increment" class = "button" pys-onClick="increment">+</button>
+       <button id = "decrement" class = "button" pys-onClick="decrement">-</button>
        <h3 id="value" class = "display"></h3>
+       </div>
 
     </BODY>
  </HTML>
